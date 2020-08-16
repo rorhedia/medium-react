@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CustomHeader from "./components/CustomHeader";
 import CustomNavbar from "./components/CustomNavbar";
 
+// Screens
+import Home from './screens/Home'
+
 function App() {
   return (
     <>
@@ -17,7 +20,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <h1>1</h1>
+            <Home/>
           </Route>
           <Route exact path="/home">
             <h1>HOME</h1>
