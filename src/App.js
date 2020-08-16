@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./App.css";
 
 // React Router Dom
@@ -11,6 +12,7 @@ import CustomNav from "./components/CustomNav";
 // Screens
 import Home from "./screens/Home";
 import Blog from "./screens/Blog";
+import CustomForm from "./screens/CustomForm/";
 
 function App() {
   let dnone = "";
@@ -71,7 +73,7 @@ function App() {
             <h1>MORE</h1>
           </Route>
           <Route path="/post">
-            <h1>POST</h1>
+            <CustomForm></CustomForm>
           </Route>
           <Route path="/blog">
             <Blog />
