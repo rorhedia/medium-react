@@ -13,10 +13,15 @@ import Home from "./screens/Home";
 import Blog from "./screens/Blog";
 
 function App() {
+  let dnone = "";
+  if (window.location.pathname != "/home" && window.location.pathname != "/") {
+    dnone = "d-none";
+  }
+  console.log(window.location.pathname);
   return (
     <>
       <CustomHeader />
-      <CustomNav />
+      <CustomNav className="dnone" />
 
       <Router>
         <Switch>

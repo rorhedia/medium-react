@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=Blog.css.map */
+.titleArticle {
+  margin-top: 30px;
+  font-family: "Lora", serif;
+  font-size: 15pt;
+}
+
+.Subtitle {
+  font-size: 12pt;
+}
+
+.imageB {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 310px;
+  height: 200px;
+}
+/*# sourceMappingURL=Blog.css.map */
