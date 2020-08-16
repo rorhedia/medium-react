@@ -5,5 +5,33 @@
 
 .containerCIF{
   display: flex;
- padding-right: 0;
+}
+
+
+.App-header{
+  margin-right:10px ;
+  margin-left: 10px;
+}
+
+.TextSee{
+  padding-bottom: 0;
+  text-align: right;
+  color: #51e680;
+  
+}
+.FechaCardItt{
+    font-size: 20px;
+  color: rgb(45, 45, 45);
+  text-align: left;
+  margin-bottom: 10;
+font-weight: bold;
+}
+
+
+
+@media only screen and (min-width: 520px){
+  .App-header{
+  margin-right:70px ;
+  margin-left: 70px;
+}
 }

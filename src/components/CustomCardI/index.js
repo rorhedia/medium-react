@@ -6,7 +6,7 @@ class CustomCardI extends React.Component {
     return (
       <div className="containeri">
         <div className="Textccmi">
-          <p className="FechaCardItt">POPULAR ON MEDIUM</p>
+          <p className="TextCardItt">POPULAR ON MEDIUM</p>
           <h3 className="TituloCardi">Five Chilling Instances of Time Slips</h3>
           <p className="FechaCardIt">
             Society isn’t always the best measure of wh
