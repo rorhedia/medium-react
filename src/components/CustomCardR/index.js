@@ -6,7 +6,7 @@ class CustomCardR extends React.Component {
     return (
       <div className="containerR">
         <div className="imageCR"></div>
-        <div class="TextccmR">
+        <div className="TextccmR">
           <h3 className="TituloCardR">
             {" "}
             Five Chilling Instances of Time Slips

@@ -6,7 +6,7 @@ class CustomCardL extends React.Component {
     return (
       <div className="containerL">
         <div className="imageCL"></div>
-        <div class="TextccmL">
+        <div className="TextccmL">
           <h3 className="TituloCardL">
             Five Chilling Instances of Time Slips
           </h3>

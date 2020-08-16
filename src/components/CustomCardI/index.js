@@ -5,7 +5,7 @@ class CustomCardI extends React.Component {
   render() {
     return (
       <div className="containeri">
-        <div class="Textccmi">
+        <div className="Textccmi">
           <p className="FechaCardItt">POPULAR ON MEDIUM</p>
           <h3 className="TituloCardi">Five Chilling Instances of Time Slips</h3>
           <p className="FechaCardIt">
