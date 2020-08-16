@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 
+//Components
+import Blog from "./components/Blog";
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +20,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <section className="blog">
+        <Blog />
+      </section>
     </div>
   );
 }
