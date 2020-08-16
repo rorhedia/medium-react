@@ -1,4 +1,4 @@
-.container {
+.containerList {
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,34 +6,39 @@
   margin-bottom: 20px;
 }
 
-.TituloCard {
+.TituloCardList {
   font-size: 16px;
   text-align: left;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.AutorCard {
+.AutorCardList {
   font-size: 12px;
   text-align: left;
   margin-bottom: 5px;
 }
 
-.FechaCard {
+.FechaCardList {
   font-size: 12px;
   color: grey;
   text-align: left;
   margin-bottom: 0;
 }
 
-.Textccm {
+.TextccmList {
   padding-left: 20px;
   margin-bottom: 0;
   width: 73%;
 }
 
-.imageC {
+.Num {
+  color: rgba(154, 154, 154, 0.749);
+  font-size: 25px;
+}
+
+.imageCList {
   width: 115px;
   height: 115px;
 }
-/*# sourceMappingURL=CustomCard.css.map */
+/*# sourceMappingURL=CustomCardList.css.map */

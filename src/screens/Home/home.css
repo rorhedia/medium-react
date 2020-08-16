@@ -1,0 +1,38 @@
+.containerCardTT {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containerCIF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App-header {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.TextSee {
+  padding-bottom: 0;
+  text-align: right;
+  color: #51e680;
+}
+
+.FechaCardItt {
+  font-size: 20px;
+  color: #2d2d2d;
+  text-align: left;
+  margin-bottom: 10;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 520px) {
+  .App-header {
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,62 @@
+.containeri {
+  color: black;
+  display: flex;
+ margin-bottom: 20px;
+ width: 100%;
+ 
+}
+.TituloCardi {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.AutorCardi{
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.FechaCardi {
+  font-size: 12px;
+  color: grey;
+  text-align: left;
+  margin-bottom: 0;
+}
+.Textccmi {
+  padding-right: 0px;
+  margin-bottom: 0;
+  width: 73%;
+  padding-left: 0px;
+}
+
+.imageCi {
+  width: 145px;
+  height: 145px;
+}
+.FechaCardIt{
+    font-size: 14px;
+  color: grey;
+  text-align: left;
+  margin-bottom: 10;
+
+
+}
+
+.TextCardItt{
+      font-size: 14px;
+  color: grey;
+  text-align: left;
+  margin-bottom: 0;
+font-weight: bold;
+}
+
+@media only screen and (min-width: 520px){
+.Textccmi {
+  padding-right: 80px;
+  margin-bottom: 0;
+  width: 73%;
+  padding-left: 85px;
+}
+}
