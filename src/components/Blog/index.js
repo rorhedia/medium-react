@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Typography } from "antd";
+import { Typography, Button } from "antd";
 
 class Blog extends Component {
   render() {
@@ -7,6 +7,7 @@ class Blog extends Component {
       <div>
         <h1>The One Book That Will Change Your Life</h1>
         <h2>And allow you to live by different rules.</h2>
+        <Button>Aceptar contrato con el diablo</Button>
         <p>
           I’m supposed to be at a music festival in Germany right now, not at
           home writing this column. My friend and I made the plans months ago.
