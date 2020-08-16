@@ -6,7 +6,7 @@ import { Row, Col } from "antd";
 // CSS
 import "./CustomNav.css";
 
-function CustomNavbar() {
+function CustomNav() {
   const dataNavbar = [
     "HOME",
     "POPULAR",
@@ -81,4 +81,4 @@ function CustomNavbar() {
   );
 }
 
-export default CustomNavbar;
+export default CustomNav;

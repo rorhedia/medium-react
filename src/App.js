@@ -6,21 +6,21 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components
 import CustomHeader from "./components/CustomHeader";
-import CustomNavbar from "./components/CustomNavbar";
+import CustomNav from "./components/CustomNav";
 
 // Screens
-import Home from './screens/Home'
+import Home from "./screens/Home";
 
 function App() {
   return (
     <>
       <CustomHeader />
-      <CustomNavbar />
+      <CustomNav />
 
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home/>
+            <Home />
           </Route>
           <Route exact path="/home">
             <h1>HOME</h1>
