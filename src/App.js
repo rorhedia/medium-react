@@ -9,7 +9,7 @@ import CustomHeader from "./components/CustomHeader";
 import CustomNavbar from "./components/CustomNavbar";
 
 // Screens
-import Home from './screens/Home'
+import Home from "./screens/Home";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home/>
+            <Home />
           </Route>
           <Route exact path="/home">
             <h1>HOME</h1>

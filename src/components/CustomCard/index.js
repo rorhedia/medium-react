@@ -1,5 +1,5 @@
 import React from "react";
-import "./CustomCard.scss";
+import "./CustomCard.css";
 
 class CustomCard extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class CustomCard extends React.Component {
         <div className="Textccm">
           <h3 className="TituloCard"> Five Chilling Instances of Time Slips</h3>
           <p className="AutorCard">Tony Walker in Inside the Simulation</p>
-          <p className="FechaCard">August 03 · 4 min read  ★</p>
+          <p className="FechaCard">August 03 · 4 min read ★</p>
         </div>
       </div>
     );
