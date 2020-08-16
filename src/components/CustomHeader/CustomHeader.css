@@ -1,0 +1,71 @@
+.header {
+  padding: 10px 0;
+}
+
+.header .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+
+.header .logo-container .logo-mobile {
+  max-width: 40px;
+}
+
+.header .logo-container .logo-desktop {
+  max-width: 100px;
+}
+
+.header .header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header .header-right svg {
+  margin: 0 10px;
+}
+
+.header .header-right img {
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.header .header-right a {
+  color: black;
+}
+
+.header .header-right .bi.bi-bookmarks {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header .header-right .bi.bi-bookmarks {
+    display: block;
+  }
+}
+
+.header .header-right .btn-upgrade {
+  margin: 0 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 6px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header .header-right .btn-upgrade {
+    display: block;
+  }
+}
+/*# sourceMappingURL=CustomHeader.css.map */
