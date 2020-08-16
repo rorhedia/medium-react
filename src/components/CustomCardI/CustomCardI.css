@@ -4,8 +4,7 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
-  width: 70%;
-  padding-left: 70px;
+  width: 100%;
 }
 
 .TituloCardi {
@@ -29,9 +28,10 @@
 }
 
 .Textccmi {
-  padding-right: 80px;
+  padding-right: 0px;
   margin-bottom: 0;
   width: 73%;
+  padding-left: 0px;
 }
 
 .imageCi {
@@ -46,11 +46,20 @@
   margin-bottom: 10;
 }
 
-.FechaCardItt {
+.TextCardItt {
   font-size: 14px;
   color: grey;
   text-align: left;
   margin-bottom: 0;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 520px) {
+  .Textccmi {
+    padding-right: 80px;
+    margin-bottom: 0;
+    width: 73%;
+    padding-left: 85px;
+  }
 }
 /*# sourceMappingURL=CustomCardI.css.map */

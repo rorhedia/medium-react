@@ -8,7 +8,6 @@ class CustomCardR extends React.Component {
         <div className="imageCR"></div>
         <div className="TextccmR">
           <h3 className="TituloCardR">
-            {" "}
             Five Chilling Instances of Time Slips
           </h3>
           <p className="FechaCardRt">
