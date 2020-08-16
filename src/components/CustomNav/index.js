@@ -4,7 +4,7 @@ import React from "react";
 import { Row, Col } from "antd";
 
 // CSS
-import "./CustomNavbar.css";
+import "./CustomNav.css";
 
 function CustomNavbar() {
   const dataNavbar = [
