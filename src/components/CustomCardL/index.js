@@ -1,5 +1,5 @@
 import React from "react";
-import "./CustomCardL.scss";
+import "./CustomCardL.css";
 
 class CustomCardL extends React.Component {
   render() {
@@ -7,9 +7,7 @@ class CustomCardL extends React.Component {
       <div className="containerL">
         <div className="imageCL"></div>
         <div className="TextccmL">
-          <h3 className="TituloCardL">
-            Five Chilling Instances of Time Slips
-          </h3>
+          <h3 className="TituloCardL">Five Chilling Instances of Time Slips</h3>
           <p className="FechaCardLt">
             Society isn’t always the best measure of wh
           </p>
