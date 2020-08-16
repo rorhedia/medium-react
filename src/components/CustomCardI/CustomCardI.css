@@ -1,0 +1,56 @@
+.containeri {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  width: 70%;
+  padding-left: 70px;
+}
+
+.TituloCardi {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.AutorCardi {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.FechaCardi {
+  font-size: 12px;
+  color: grey;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.Textccmi {
+  padding-right: 80px;
+  margin-bottom: 0;
+  width: 73%;
+}
+
+.imageCi {
+  width: 145px;
+  height: 145px;
+}
+
+.FechaCardIt {
+  font-size: 14px;
+  color: grey;
+  text-align: left;
+  margin-bottom: 10;
+}
+
+.FechaCardItt {
+  font-size: 14px;
+  color: grey;
+  text-align: left;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+/*# sourceMappingURL=CustomCardI.css.map */

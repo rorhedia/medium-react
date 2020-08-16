@@ -1,0 +1,13 @@
+.containerCardTT {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containerCIF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 0;
+}
+/*# sourceMappingURL=home.css.map */
