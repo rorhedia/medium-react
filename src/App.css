@@ -46,4 +46,5 @@
 
 .containerCIF{
   display: flex;
+ padding-right: 0;
 }
