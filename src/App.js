@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-// Reac Router Dom
+// React Router Dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components
@@ -10,6 +10,7 @@ import CustomNav from "./components/CustomNav";
 
 // Screens
 import Home from "./screens/Home";
+import Blog from "./screens/Blog";
 
 function App() {
   return (
@@ -66,6 +67,9 @@ function App() {
           </Route>
           <Route path="/post">
             <h1>POST</h1>
+          </Route>
+          <Route path="/blog">
+            <Blog />
           </Route>
         </Switch>
       </Router>
