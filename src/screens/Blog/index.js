@@ -30,24 +30,28 @@ class Blog extends Component {
               Overthinking can lead to serious emotional distress and increase
               your risk of mental health problems
             </Paragraph>
-            <div>
-              <Row justify space-a>
-                <Col offset>
-                  <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                  <Paragraph strong>Thomas Oppong</Paragraph>
-                  <Button>Follow</Button>
-                  <Paragraph>Aug 18, 2020 · 6 min read</Paragraph>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="icons">
-                  <TwitterOutlined />
-                  <LinkedinFilled />
-                  <FacebookFilled />
-                  <BookOutlined />
-                  <EllipsisOutlined />
-                </Col>
-              </Row>
+            <div className="author">
+              <div>
+                <Avatar
+                  margin-right={0}
+                  size={50}
+                  src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                />
+              </div>
+              <div>
+                <ol>Thomas Oppong</ol>
+                <ol>Aug 18, 2020 · 6 min read</ol>
+              </div>
+              <div>
+                <Button>Follow</Button>
+              </div>
+            </div>
+            <div className="icons">
+              <TwitterOutlined />
+              <LinkedinFilled />
+              <FacebookFilled />
+              <BookOutlined />
+              <EllipsisOutlined />
             </div>
             <img
               className="imageB"
@@ -141,6 +145,19 @@ class Blog extends Component {
             </Paragraph>
           </Col>
         </Row>
+        <footer className="footer">
+          <div className="logoFooter">
+            <img
+              src="https://miro.medium.com/max/968/1*uLuWzCXfq2rt1t_TkuLB8A.png"
+              height="40px"
+            />
+          </div>
+          <div className="textFooter">
+            <ol>About</ol>
+            <ol>Help</ol>
+            <ol>Legal</ol>
+          </div>
+        </footer>
       </div>
     );
   }
