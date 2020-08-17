@@ -2,12 +2,10 @@
   padding-top: 30px;
   font-style: normal;
   font: bolder;
-
-  flex: content;
 }
 
 .formD {
-  justify-items: normal;
+  justify-items: auto;
   float: left;
   clear: left;
   padding: 5em;
@@ -23,5 +21,30 @@
   block-size: 50px;
 }
 
-.buttonDelete {
+.bottonR {
+  padding-top: 10px;
+}
+
+@media (min-width: 400px) {
+  .imagenFrom {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 400) {
+  .formD {
+    justify-items: center;
+  }
+}
+
+@media (min-width: 400) {
+  .itemGenerico {
+    justify-items: auto;
+  }
+}
+
+@media (min-width: 400px) {
+  .bottonR {
+    padding-top: 20px;
+  }
 }
