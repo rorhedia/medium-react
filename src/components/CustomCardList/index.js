@@ -1,21 +1,23 @@
 import React from "react";
 import "./CustomCardList.css";
 
-class CustomCardList extends React.Component {
-  render() {
+function CustomCardList({
+  card: { urlimage, title, text, author, company, key },
+}) {
+    let urlRedirect = `/blog/${key}`;
     return (
       <div className="containerList">
         <p className="Num">01</p>
         <div className="TextccmList">
+          <a href={urlRedirect}>
           <h3 className="TituloCardList">
-            Five Chilling Instances of Time Slips
-          </h3>
-          <p className="AutorCardList">Tony Walker in Inside the Simulation</p>
+            {title}
+          </h3></a>
+          <p className="AutorCardList">{author} in {company}</p>
           <p className="FechaCardList">August 03 · 4 min read ★</p>
         </div>
       </div>
     );
   }
-}
 
 export default CustomCardList;
