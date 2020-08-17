@@ -1,1 +1,26 @@
-/* No CSS *//*# sourceMappingURL=CustomForm.css.map */
+.containerForm {
+  padding-top: 30px;
+  font-style: normal;
+  font: bolder;
+  -webkit-box-flex: content;
+      -ms-flex: content;
+          flex: content;
+}
+
+.formD {
+  justify-items: normal;
+  float: left;
+  clear: left;
+  padding: 5em;
+  background-color: #f7f5f5;
+  color: #003;
+}
+
+.imagenFrom {
+  width: 500px;
+}
+
+.itemGenerico {
+  block-size: 50px;
+}
+/*# sourceMappingURL=CustomForm.css.map */
