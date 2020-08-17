@@ -1,14 +1,17 @@
 .containerForm {
-  padding-top: 30px;
+  padding: 15px;
   font-style: normal;
   font: bolder;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .formD {
   justify-items: auto;
   float: left;
   clear: left;
-  padding: 5em;
+  padding: 15px;
   background-color: #f7f5f5;
   color: #003;
 }
@@ -47,5 +50,9 @@
   .bottonR {
     padding-top: 20px;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=CustomForm.css.map */

@@ -19,29 +19,25 @@ function CustomForm() {
 
   return (
     <Row className="containerForm">
-      <Col className="formD" span={10} push={2} xs={24} sm={24} md={12} lg={12}>
+      <Col className="formD" xs={24} sm={24} md={24} lg={12}>
         <Form onFinish={createPost}>
-          <Form.Item name="title" className="itemGenerico" label="Tittle">
-            <Input />
+          <Form.Item name="title" className="itemGenerico">
+            <Input placeholder="input placeholder" />
           </Form.Item>
-          <Form.Item name="text" className="itemGenerico" label="Text">
-            <Input.TextArea />
+          <Form.Item name="text" className="itemGenerico">
+            <Input.TextArea placeholder="input placeholder" />
           </Form.Item>
-          <Form.Item name="author" className="itemGenerico" label="Author">
-            <Input />
+          <Form.Item name="author" className="itemGenerico">
+            <Input placeholder="input placeholder" />
           </Form.Item>
-          <Form.Item name="urlimage" className="itemGenerico" label="Image">
-            <Input />
+          <Form.Item name="urlimage" className="itemGenerico">
+            <Input placeholder="input placeholder" />
           </Form.Item>
-          <Form.Item
-            name="paragraph"
-            className="itemGenerico"
-            label="Paragraph"
-          >
-            <Input />
+          <Form.Item name="paragraph" className="itemGenerico">
+            <Input placeholder="input placeholder" />
           </Form.Item>
-          <Form.Item name="company" className="itemGenerico" label="Company">
-            <Input />
+          <Form.Item name="company" className="itemGenerico">
+            <Input placeholder="input placeholder" />
           </Form.Item>
 
           <Row xs={24} sm={24} md={24} lg={24}>
@@ -55,7 +51,7 @@ function CustomForm() {
           </Row>
         </Form>
       </Col>
-      <Col span={14} push={3} xs={24} sm={24} md={12} lg={12}>
+      <Col span={14} push={3} xs={0} sm={0} md={0} lg={12}>
         <img className="imagenFrom" src={photo} alt="img-form" />
       </Col>
     </Row>

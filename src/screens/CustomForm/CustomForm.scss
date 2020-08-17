@@ -1,14 +1,15 @@
 .containerForm {
-  padding-top: 30px;
+  padding: 15px;
   font-style: normal;
   font: bolder;
+  justify-content: center;
 }
 
 .formD {
   justify-items: auto;
   float: left;
   clear: left;
-  padding: 5em;
+  padding: 15px;
   background-color: rgb(247, 245, 245);
   color: #003;
 }
@@ -47,4 +48,8 @@
   .bottonR {
     padding-top: 20px;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
