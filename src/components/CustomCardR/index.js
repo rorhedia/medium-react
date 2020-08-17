@@ -1,24 +1,29 @@
 import React from "react";
 import "./CustomCardR.css";
 
-class CustomCardR extends React.Component {
-  render() {
-    return (
-      <div className="containerR">
-        <div className="imageCR"></div>
-        <div className="TextccmR">
+function CustomCardR({
+  card: { urlimage, title, text, author, company, key },
+}) {
+  let urlRedirect = `/blog/${key}`;
+  return (
+    <div className="containerR">
+      <a href={urlRedirect}>
+        <img src={urlimage} alt={key} className="imageCR"></img>
+        </a>
+      <div className="TextccmR">
+        <a href={urlRedirect}>
           <h3 className="TituloCardR">
-            Five Chilling Instances of Time Slips
-          </h3>
+            {title}
+          </h3></a>
+        <a href={urlRedirect}>
           <p className="FechaCardRt">
-            Society isn’t always the best measure of wh
-          </p>
-          <p className="AutorCardR">Tony Walker in Inside the Simulation</p>
+            {text}
+          </p></a>
+          <p className="AutorCardR">{author} in {company}</p>
           <p className="FechaCardR">August 03 · 4 min read ★</p>
         </div>
       </div>
     );
   }
-}
 
 export default CustomCardR;

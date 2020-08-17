@@ -35,12 +35,12 @@ function Home() {
           {posts.length ? <CustomCardL card={posts[0]} /> : null}
         </Col>
         <Col className="containerCMT" xs={24} sm={24} md={12} lg={7}>
-          <CustomCard />
-          <CustomCard />
-          <CustomCard />
+          {posts.length ? <CustomCard card={posts[1]} /> : null}
+          {posts.length ? <CustomCard card={posts[2]} /> : null}
+          {posts.length ? <CustomCard card={posts[3]} /> : null}
         </Col>
         <Col className="containerLT" xs={0} sm={0} md={0} lg={8}>
-          <CustomCardR />
+          {posts.length ? <CustomCardR card={posts[4]} /> : null}
         </Col>
       </Row>
       <p className="TextSee">SEE EDITOR’S PICKS ›</p>
@@ -50,12 +50,12 @@ function Home() {
       <br></br>
       <Row className="containerCIF">
         <Col xs={24} sm={24} md={24} lg={16}>
-          <CustomCardI />
+          {posts.length ? <CustomCardI card={posts[5]} /> : null}
         </Col>
         <Col xs={24} sm={24} md={24} lg={6}>
           <p className="FechaCardItt">Popular on Medium</p>
           <hr></hr>
-          <CustomCardList />
+          {posts.length ? <CustomCardList card={posts[6]} /> : null}
         </Col>
       </Row>
     </header>
