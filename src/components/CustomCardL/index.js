@@ -1,22 +1,31 @@
 import React from "react";
 import "./CustomCardL.css";
 
-class CustomCardL extends React.Component {
-  render() {
-    return (
-      <div className="containerL">
-        <div className="imageCL"></div>
-        <div className="TextccmL">
-          <h3 className="TituloCardL">Five Chilling Instances of Time Slips</h3>
-          <p className="FechaCardLt">
-            Society isn’t always the best measure of wh
-          </p>
-          <p className="AutorCardL">Tony Walker in Inside the Simulation</p>
-          <p className="FechaCardL">August 03 · 4 min read ★</p>
-        </div>
+function CustomCardL({
+  card: { urlimage, title, text, author, company, key },
+}) {
+  let urlRedirect = `/blog/${key}`;
+  //window.location.pathname.split('/')[2]
+
+  return (
+    <div className="containerL">
+      <a href={urlRedirect}>
+        <img src={urlimage} alt={key} className="imageCL" />
+      </a>
+      <div className="TextccmL">
+        <a href={urlRedirect}>
+          <h3 className="TituloCardL">{title}</h3>
+        </a>
+        <a href={urlRedirect}>
+          <p className="FechaCardLt">{text}</p>
+        </a>
+        <p className="AutorCardL">
+          {author} in {company}
+        </p>
+        <p className="FechaCardL">06 agosto· 12:00pm ★</p>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default CustomCardL;
