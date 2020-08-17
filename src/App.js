@@ -1,7 +1,8 @@
 import React from "react";
+
 import "./App.css";
 
-// Reac Router Dom
+// React Router Dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components
@@ -10,12 +11,19 @@ import CustomNav from "./components/CustomNav";
 
 // Screens
 import Home from "./screens/Home";
+import Blog from "./screens/Blog";
+import CustomForm from "./screens/CustomForm/";
 
 function App() {
+  let dnone = "";
+  if (window.location.pathname != "/home" && window.location.pathname != "/") {
+    dnone = "d-none";
+  }
+  console.log(window.location.pathname);
   return (
     <>
       <CustomHeader />
-      <CustomNav />
+      <CustomNav className="dnone" />
 
       <Router>
         <Switch>
@@ -65,7 +73,10 @@ function App() {
             <h1>MORE</h1>
           </Route>
           <Route path="/post">
-            <h1>POST</h1>
+            <CustomForm></CustomForm>
+          </Route>
+          <Route path="/blog">
+            <Blog />
           </Route>
         </Switch>
       </Router>

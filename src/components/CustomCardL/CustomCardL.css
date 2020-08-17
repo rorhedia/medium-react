@@ -35,7 +35,7 @@
 .TextccmL {
   margin-bottom: 0;
   width: 90%;
-  padding-left: 85px;
+  padding-left: 0px;
 }
 
 .imageCL {
@@ -43,5 +43,13 @@
   height: 155px;
   width: 100%;
   background-position: 50% 50%;
+}
+
+@media only screen and (min-width: 520px) {
+  .TextccmL {
+    margin-bottom: 0;
+    width: 90%;
+    padding-left: 85px;
+  }
 }
 /*# sourceMappingURL=CustomCardL.css.map */
