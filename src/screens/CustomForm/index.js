@@ -1,6 +1,6 @@
 import React from "react";
 import "./CustomForm.css";
-import { Form, Input, InputNumber, Button } from "antd";
+import { Form, Input, Button } from "antd";
 import { Row, Col } from "antd";
 
 function CustomForm() {
@@ -13,6 +13,10 @@ function CustomForm() {
       body: JSON.stringify(data),
     }).then((response) => console.log(response));
   };
+
+  const { REACT_APP_URL_IMAGES } = process.env;
+  let photo = `${REACT_APP_URL_IMAGES}/Fondo-from.png`;
+
   return (
     <Row className="containerForm">
       <Col className="formD" span={10} push={2} xs={24} sm={24} md={12} lg={12}>
@@ -52,10 +56,7 @@ function CustomForm() {
         </Form>
       </Col>
       <Col span={14} push={3} xs={24} sm={24} md={12} lg={12}>
-        <img
-          className="imagenFrom"
-          src="http://127.0.0.1:5503/images/1_90cu6c0u4ZL8H8ic1woZDw@2x.png"
-        ></img>
+        <img className="imagenFrom" src={photo} alt="img-form" />
       </Col>
     </Row>
   );

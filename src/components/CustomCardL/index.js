@@ -1,15 +1,24 @@
 import React from "react";
 import "./CustomCardL.css";
 
-function CustomCardL(props) {
-  console.log("icbefubv", props, props.card);
-  const { urlimage, title, text, author, company, key } = props;
+function CustomCardL({
+  card: { urlimage, title, text, author, company, key },
+}) {
+  let urlRedirect = `/blog/${key}`;
+  //window.location.pathname.split('/')[2]
+
   return (
     <div className="containerL">
-      <img src={urlimage} className="imageCL" />
+      <a href={urlRedirect}>
+        <img src={urlimage} alt={key} className="imageCL" />
+      </a>
       <div className="TextccmL">
-        <h3 className="TituloCardL">{title}</h3>
-        <p className="FechaCardLt">{text}</p>
+        <a href={urlRedirect}>
+          <h3 className="TituloCardL">{title}</h3>
+        </a>
+        <a href={urlRedirect}>
+          <p className="FechaCardLt">{text}</p>
+        </a>
         <p className="AutorCardL">
           {author} in {company}
         </p>
