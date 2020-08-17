@@ -1,8 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import { useState, useEffect } from "react";
 
 // Ant Design
-import { Row, Col } from "antd";
+import { Row, Col, Typography } from "antd";
+import {
+  TwitterOutlined,
+  LinkedinFilled,
+  FacebookFilled,
+  BookOutlined,
+  EllipsisOutlined,
+} from "@ant-design/icons";
 
 // CSS
 import "./CustomHeader.css";
