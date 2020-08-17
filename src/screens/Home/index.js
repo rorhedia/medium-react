@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import "./home.css";
 
+// Ant Design
+import { Row, Col } from "antd";
+
 import CustomCard from "../../components/CustomCard";
 import CustomCardR from "../../components/CustomCardR";
 import CustomCardL from "../../components/CustomCardL";
 import CustomCardI from "../../components/CustomCardI";
 import CustomCardList from "../../components/CustomCardList";
-// Ant Design
-import { Row, Col } from "antd";
 
 function Home() {
   const [posts, setPost] = useState([]);
@@ -25,13 +26,13 @@ function Home() {
         setPost(usersArr);
       });
   }, []);
+
   return (
     <header className="App-header">
-      {console.log(posts, posts[1])}
       <br></br>
       <Row className="containerCardTT">
         <Col className="containerCRT" xs={24} sm={24} md={12} lg={9}>
-          {posts ? <CustomCardL card={posts[0]} /> : null}
+          {posts.length ? <CustomCardL card={posts[0]} /> : null}
         </Col>
         <Col className="containerCMT" xs={24} sm={24} md={12} lg={7}>
           <CustomCard />

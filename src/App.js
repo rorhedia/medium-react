@@ -15,15 +15,18 @@ import Blog from "./screens/Blog";
 import CustomForm from "./screens/CustomForm/";
 
 function App() {
-  let dnone = "";
-  if (window.location.pathname != "/home" && window.location.pathname != "/") {
-    dnone = "d-none";
+  let isVisible = true;
+  if (
+    window.location.pathname !== "/home" &&
+    window.location.pathname !== "/"
+  ) {
+    isVisible = false;
   }
-  console.log(window.location.pathname);
+
   return (
     <>
       <CustomHeader />
-      <CustomNav className="dnone" />
+      {isVisible ? <CustomNav /> : null}
 
       <Router>
         <Switch>
@@ -31,7 +34,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/home">
-            <h1>HOME</h1>
+            <Home />
           </Route>
           <Route path="/popular">
             <h1>POPULAR</h1>
@@ -73,9 +76,9 @@ function App() {
             <h1>MORE</h1>
           </Route>
           <Route path="/post">
-            <CustomForm></CustomForm>
+            <CustomForm />
           </Route>
-          <Route path="/blog">
+          <Route path="/blog/:id">
             <Blog />
           </Route>
         </Switch>

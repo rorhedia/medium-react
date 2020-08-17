@@ -1,7 +1,5 @@
 import React from "react";
 import "./CustomCard.css";
-// Ant Design
-import { Row, Col } from "antd";
 
 class CustomCard extends React.Component {
   render() {
