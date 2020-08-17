@@ -14,19 +14,16 @@ const { Title, Paragraph } = Typography;
 
 //window.location.search
 function Blog() {
-  const [posts, setPost] = useState([]);
+  const [post, setPost] = useState({});
 
   useEffect(() => {
-    fetch("https://reactsessions-ac545.firebaseio.com/equipotres.json")
+    let idBlog = window.location.pathname.split("/")[2];
+    fetch(
+      `https://reactsessions-ac545.firebaseio.com/equipotres/${idBlog}.json`
+    )
       .then((res) => res.json())
       .then((data) => {
-        let usersArr = [];
-        for (const key in data) {
-          data[key]["key"] = key;
-          usersArr.push(data[key]);
-        }
-        console.log(usersArr);
-        setPost(usersArr);
+        setPost(data);
       });
   }, []);
   return (
@@ -38,9 +35,9 @@ function Blog() {
           md={{ span: 12, offset: 6 }}
           lg={{ span: 12, offset: 6 }}
         >
-          <Title className="titleArticle">title</Title>
+          <Title className="titleArticle">{post.title ? post.title : ""}</Title>
           <Paragraph className="Subtitle" type="secondary">
-            text
+            {post.text ? post.text : ""}
           </Paragraph>
           <div className="author">
             <div>
@@ -51,7 +48,7 @@ function Blog() {
               />
             </div>
             <div>
-              <ol>author</ol>
+              <ol>{post.author ? post.author : ""}</ol>
               <ol>Aug 18, 2020 · 6 min read</ol>
             </div>
             <div>
@@ -65,8 +62,8 @@ function Blog() {
             <BookOutlined />
             <EllipsisOutlined />
           </div>
-          <img className="imageB" src="" />
-          <Paragraph>paragraph</Paragraph>
+          <img className="imageB" src={post.urlimage ? post.urlimage : ""} />
+          <Paragraph>{post.paragraph ? post.paragraph : ""}</Paragraph>
           <Paragraph>
             My kids should be preparing for camp right now. Back in January, I
             created a camp spreadsheet organizing where each of my four
