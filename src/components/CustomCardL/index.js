@@ -1,22 +1,22 @@
 import React from "react";
 import "./CustomCardL.css";
 
-class CustomCardL extends React.Component {
-  render() {
-    return (
-      <div className="containerL">
-        <div className="imageCL"></div>
-        <div className="TextccmL">
-          <h3 className="TituloCardL">Five Chilling Instances of Time Slips</h3>
-          <p className="FechaCardLt">
-            Society isn’t always the best measure of wh
-          </p>
-          <p className="AutorCardL">Tony Walker in Inside the Simulation</p>
-          <p className="FechaCardL">August 03 · 4 min read ★</p>
-        </div>
+function CustomCardL(props) {
+  console.log("icbefubv", props, props.card);
+  const { urlimage, title, text, author, company, key } = props;
+  return (
+    <div className="containerL">
+      <img src={urlimage} className="imageCL" />
+      <div className="TextccmL">
+        <h3 className="TituloCardL">{title}</h3>
+        <p className="FechaCardLt">{text}</p>
+        <p className="AutorCardL">
+          {author} in {company}
+        </p>
+        <p className="FechaCardL">06 agosto· 12:00pm ★</p>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default CustomCardL;
