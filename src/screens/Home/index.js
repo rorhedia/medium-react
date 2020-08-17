@@ -10,6 +10,7 @@ import CustomCardR from "../../components/CustomCardR";
 import CustomCardL from "../../components/CustomCardL";
 import CustomCardI from "../../components/CustomCardI";
 import CustomCardList from "../../components/CustomCardList";
+import responsiveObserve from "antd/lib/_util/responsiveObserve";
 
 function Home() {
   const [posts, setPost] = useState([]);
@@ -23,6 +24,7 @@ function Home() {
           data[key]["key"] = key;
           usersArr.push(data[key]);
         }
+        usersArr.reverse();
         setPost(usersArr);
       });
   }, []);
