@@ -1,0 +1,50 @@
+.containerForm {
+  padding-top: 30px;
+  font-style: normal;
+  font: bolder;
+}
+
+.formD {
+  justify-items: auto;
+  float: left;
+  clear: left;
+  padding: 5em;
+  background-color: rgb(247, 245, 245);
+  color: #003;
+}
+
+.imagenFrom {
+  width: 500px;
+}
+
+.itemGenerico {
+  block-size: 50px;
+}
+
+.bottonR {
+  padding-top: 10px;
+}
+
+@media (min-width: 400px) {
+  .imagenFrom {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 400) {
+  .formD {
+    justify-items: center;
+  }
+}
+
+@media (min-width: 400) {
+  .itemGenerico {
+    justify-items: auto;
+  }
+}
+
+@media (min-width: 400px) {
+  .bottonR {
+    padding-top: 20px;
+  }
+}
