@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { getPosts } from "../../services.js";
 import "./home.css";
 
 // Ant Design
@@ -16,17 +16,15 @@ function Home() {
   const [posts, setPost] = useState([]);
 
   useEffect(() => {
-    fetch("https://reactsessions-ac545.firebaseio.com/equipotres.json")
-      .then((res) => res.json())
-      .then((data) => {
-        let usersArr = [];
-        for (const key in data) {
-          data[key]["key"] = key;
-          usersArr.push(data[key]);
-        }
-        usersArr.reverse();
-        setPost(usersArr);
-      });
+    getPosts().then((data) => {
+      let usersArr = [];
+      for (const key in data) {
+        data[key]["key"] = key;
+        usersArr.push(data[key]);
+      }
+      usersArr.reverse();
+      setPost(usersArr);
+    });
   }, []);
 
   return (
@@ -47,9 +45,8 @@ function Home() {
       </Row>
       <p className="TextSee">SEE EDITOR’S PICKS ›</p>
       <hr></hr>
-      
+
       <Row className="containerCIF">
-        
         <Col xs={24} sm={24} md={24} lg={16}>
           {posts.length ? <CustomCardI card={posts[5]} /> : null}
         </Col>
