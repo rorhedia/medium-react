@@ -39,7 +39,9 @@
 
 .imageCR {
   height: 155px;
-  width: 100%;
+  width: 370px;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: 50% 50%;
 }
 /*# sourceMappingURL=CustomCardR.css.map */

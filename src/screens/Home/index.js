@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { getPosts } from "../../services.js";
 
 import "./home.css";
 
@@ -14,17 +15,35 @@ import CustomCardList from "../../components/CustomCardList";
 function Home() {
   const [posts, setPost] = useState([]);
 
-  useEffect(() => {
-    fetch("https://reactsessions-ac545.firebaseio.com/equipotres.json")
-      .then((res) => res.json())
-      .then((data) => {
+  window.onscroll = function (ev) {
+    let diff = document.documentElement.scrollHeight - window.scrollY;
+    let load = document.body.offsetHeight + 10;
+
+    if (diff <= load) {
+      getPosts().then((data) => {
         let usersArr = [];
+
         for (const key in data) {
           data[key]["key"] = key;
           usersArr.push(data[key]);
         }
-        setPost(usersArr);
+
+        let newArr = posts.concat(usersArr);
+        setPost(newArr);
       });
+    }
+  };
+
+  useEffect(() => {
+    getPosts().then((data) => {
+      let usersArr = [];
+      for (const key in data) {
+        data[key]["key"] = key;
+        usersArr.push(data[key]);
+      }
+      usersArr.reverse();
+      setPost(usersArr);
+    });
   }, []);
 
   return (
@@ -32,30 +51,34 @@ function Home() {
       <br></br>
       <Row className="containerCardTT">
         <Col className="containerCRT" xs={24} sm={24} md={12} lg={9}>
-          {posts.length ? <CustomCardL card={posts[0]} /> : null}
+          {posts.length && <CustomCardL card={posts[0]} />}
         </Col>
         <Col className="containerCMT" xs={24} sm={24} md={12} lg={7}>
-          {posts.length ? <CustomCard card={posts[1]} /> : null}
-          {posts.length ? <CustomCard card={posts[2]} /> : null}
-          {posts.length ? <CustomCard card={posts[3]} /> : null}
+          {posts.length && <CustomCard card={posts[1]} />}
+          {posts.length && <CustomCard card={posts[2]} />}
+          {posts.length && <CustomCard card={posts[3]} />}
         </Col>
         <Col className="containerLT" xs={0} sm={0} md={0} lg={8}>
-          {posts.length ? <CustomCardR card={posts[4]} /> : null}
+          {posts.length && <CustomCardR card={posts[4]} />}
         </Col>
       </Row>
       <p className="TextSee">SEE EDITOR’S PICKS ›</p>
-      <br></br>
       <hr></hr>
-      <br></br>
-      <br></br>
+
       <Row className="containerCIF">
+        {/** SCROLL INFINITO */}
         <Col xs={24} sm={24} md={24} lg={16}>
-          {posts.length ? <CustomCardI card={posts[5]} /> : null}
+          {posts.length &&
+            posts.map((post, idx) => <CustomCardI key={idx} card={post} />)}
         </Col>
-        <Col xs={24} sm={24} md={24} lg={6}>
-          <p className="FechaCardItt">Popular on Medium</p>
+        {/** POPULAR ON MEDIUM */}
+        <Col className="positioS" xs={24} sm={24} md={24} lg={6}>
+          <p className="PopularOnM">Popular on Medium</p>
           <hr></hr>
-          {posts.length ? <CustomCardList card={posts[6]} /> : null}
+          {posts.length && <CustomCardList card={posts[6]} itemList="01" />}
+          {posts.length && <CustomCardList card={posts[7]} itemList="02" />}
+          {posts.length && <CustomCardList card={posts[8]} itemList="03" />}
+          {posts.length && <CustomCardList card={posts[9]} itemList="04" />}
         </Col>
       </Row>
     </header>
