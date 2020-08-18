@@ -28,7 +28,7 @@ function CustomForm() {
           <Form.Item name="author" className="itemGenerico" label="Author">
             <Input />
           </Form.Item>
-          <Form.Item name="urlimage" className="itemGenerico" label="Url">
+          <Form.Item name="urlimage" className="itemGenerico" label="Image Url">
             <Input />
           </Form.Item>
           <Form.Item
