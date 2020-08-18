@@ -13,19 +13,22 @@ import CustomNav from "./components/CustomNav";
 import Home from "./screens/Home";
 import Blog from "./screens/Blog";
 import CustomForm from "./screens/CustomForm/";
+import Popular from "./screens/Popular";
 
 function App() {
   let isVisible = true;
+  let sticky = true;
   if (
     window.location.pathname !== "/home" &&
     window.location.pathname !== "/"
   ) {
     isVisible = false;
+    sticky = false;
   }
 
   return (
     <>
-      <CustomHeader />
+      <CustomHeader className={sticky ? "headerSticky b" : "b"} />
       {isVisible ? <CustomNav /> : null}
 
       <Router>
@@ -37,7 +40,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/popular">
-            <h1>POPULAR</h1>
+            <Popular />
           </Route>
           <Route path="/momentum">
             <h1>MOMENTUM</h1>
