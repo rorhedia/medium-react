@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./App.css";
 
@@ -16,6 +16,15 @@ import CustomForm from "./screens/CustomForm/";
 import Popular from "./screens/Popular";
 
 function App() {
+  const [flag, setFlag] = useState({
+    isVisible: true,
+    sticky: true,
+  });
+
+  const handleFlag = (data) => {
+    console.log(data);
+  };
+
   let isVisible = true;
   let sticky = true;
   if (
@@ -30,7 +39,7 @@ function App() {
     <>
       <Router>
         <CustomHeader className={sticky ? "headerSticky" : ""} />
-        {isVisible ? <CustomNav /> : null}
+        {isVisible ? <CustomNav callback={handleFlag} /> : null}
         <Switch>
           <Route exact path="/">
             <Home />

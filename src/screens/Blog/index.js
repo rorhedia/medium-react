@@ -1,5 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
+
+import { useParams } from "react-router-dom";
+
+import { getPost } from "../../services.js";
+
 import "./Blog.css";
 import { Typography, Button, Row, Col, Avatar } from "antd";
 import {
@@ -14,17 +19,14 @@ const { Title, Paragraph } = Typography;
 
 //window.location.search
 function Blog() {
+  const { id } = useParams();
+
   const [post, setPost] = useState({});
 
   useEffect(() => {
-    let idBlog = window.location.pathname.split("/")[2];
-    fetch(
-      `https://reactsessions-ac545.firebaseio.com/equipotres/${idBlog}.json`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setPost(data);
-      });
+    getPost(id).then((data) => {
+      setPost(data);
+    });
   }, []);
   return (
     <div>

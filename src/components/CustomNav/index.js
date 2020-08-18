@@ -1,7 +1,7 @@
 import React from "react";
 
 // React Router Dom
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 
 // Ant Design
 import { Row, Col } from "antd";
@@ -9,7 +9,9 @@ import { Row, Col } from "antd";
 // CSS
 import "./CustomNav.css";
 
-function CustomNav() {
+function CustomNav(props) {
+  const { url } = useRouteMatch();
+  console.log(url);
   const dataNavbar = [
     "HOME",
     "POPULAR",
@@ -27,6 +29,10 @@ function CustomNav() {
     "MORE",
   ];
 
+  const sedStatusLink = () => {
+    console.log("hizo click", url);
+  };
+
   const listItems = dataNavbar.map((data, idx) => {
     let href = data.toLowerCase();
 
@@ -35,7 +41,12 @@ function CustomNav() {
     }
 
     return (
-      <Link key={idx} to={`/${href}`} className="link-url">
+      <Link
+        onClick={sedStatusLink}
+        key={idx}
+        to={`/${href}`}
+        className="link-url"
+      >
         {data}
       </Link>
     );

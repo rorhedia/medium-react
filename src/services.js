@@ -8,7 +8,7 @@ const getPosts = async () => {
 };
 
 const getPost = async (id) => {
-  const response = await fetch(`${URL_BASE}/id.json`);
+  const response = await fetch(`${URL_BASE}/${id}.json`);
   const post = await response.json();
 
   return post;
