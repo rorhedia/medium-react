@@ -46,18 +46,28 @@ function Home() {
         </Col>
       </Row>
       <p className="TextSee">SEE EDITOR’S PICKS ›</p>
-      <br></br>
       <hr></hr>
-      <br></br>
-      <br></br>
+      
       <Row className="containerCIF">
+        
         <Col xs={24} sm={24} md={24} lg={16}>
           {posts.length ? <CustomCardI card={posts[5]} /> : null}
         </Col>
-        <Col xs={24} sm={24} md={24} lg={6}>
-          <p className="FechaCardItt">Popular on Medium</p>
+        <Col className="positioS" xs={24} sm={24} md={24} lg={6}>
+          <p className="PopularOnM">Popular on Medium</p>
           <hr></hr>
-          {posts.length ? <CustomCardList card={posts[6]} /> : null}
+          {posts.length ? (
+            <CustomCardList card={posts[6]} itemList="01" />
+          ) : null}
+          {posts.length ? (
+            <CustomCardList card={posts[7]} itemList="02" />
+          ) : null}
+          {posts.length ? (
+            <CustomCardList card={posts[8]} itemList="03" />
+          ) : null}
+          {posts.length ? (
+            <CustomCardList card={posts[9]} itemList="04" />
+          ) : null}
         </Col>
       </Row>
     </header>

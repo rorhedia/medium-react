@@ -1,13 +1,14 @@
 import React from "react";
 import "./CustomCardList.css";
 
+
 function CustomCardList({
-  card: { urlimage, title, text, author, company, key },
+  card: { urlimage, title, text, author, company, key, }, itemList
 }) {
     let urlRedirect = `/blog/${key}`;
     return (
       <div className="containerList">
-        <p className="Num">01</p>
+        <p className="NumList">{itemList}</p>
         <div className="TextccmList">
           <a href={urlRedirect}>
           <h3 className="TituloCardList">

@@ -43,8 +43,9 @@
 .imageCL {
  //background-image: url("https://miro.medium.com/max/700/1*TyJQKnUbPwUMyjmGweO7Yw.jpeg");
 height: 155px;
-width: 100%;
+width: 300px;
 background-position: 50% 50%;
+object-fit: cover;
 }
 
 
@@ -54,5 +55,14 @@ background-position: 50% 50%;
   margin-bottom: 0;
   width: 90%;
   padding-left: 85px;
+}
+}
+
+@media only screen and (min-width: 520px){
+  .imageCL {
+
+ height: 155px;
+width: 420px;
+object-fit: cover;
 }
 }
