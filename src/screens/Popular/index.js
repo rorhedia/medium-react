@@ -26,7 +26,7 @@ function Popular() {
     <div>
       <Row>
         <Col
-          xs={{ span: 20, offset: 2 }}
+          xs={{ span: 22, offset: 2 }}
           sm={{ span: 20, offset: 2 }}
           md={{ span: 14, offset: 2 }}
           lg={{ span: 14, offset: 2 }}
