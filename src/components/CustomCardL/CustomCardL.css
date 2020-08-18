@@ -1,7 +1,7 @@
 .containerL {
   color: black;
   margin-bottom: 20px;
-  padding-right: 20px;
+  padding-right: 0px;
 }
 
 .TituloCardL {
@@ -41,7 +41,6 @@
 .imageCL {
   height: 155px;
   width: 300px;
-  background-position: 50% 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -54,10 +53,19 @@
   }
 }
 
-@media only screen and (min-width: 520px) {
+@media only screen and (min-width: 728px) {
   .imageCL {
-    height: 155px;
-    width: 420px;
+    height: 130px;
+    width: 290px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .imageCL {
+    height: 130px;
+    width: 410px;
     -o-object-fit: cover;
        object-fit: cover;
   }

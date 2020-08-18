@@ -13,10 +13,10 @@ function CustomCardI({
       <div className="Textccmi">
         <p className="TextCardItt">POPULAR ON MEDIUM</p>
         <Link to={urlRedirect}>
-          <h3 className="TituloCardi">{title}</h3>
+          <h3 className="TituloCardi">{title.slice(0, 40)}</h3>
         </Link>
         <Link to={urlRedirect}>
-          <p className="FechaCardIt">{text}</p>
+          <p className="FechaCardIt">{text.slice(0, 43)}</p>
         </Link>
         <Popover content={text} title={company} trigger="hover">
           <p className="AutorCardi">

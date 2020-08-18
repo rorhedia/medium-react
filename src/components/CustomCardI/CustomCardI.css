@@ -3,25 +3,25 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   width: 100%;
 }
 
 .TituloCardi {
-  font-size: 20px;
+  font-size: 15px;
   text-align: left;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 .AutorCardi {
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
   margin-bottom: 5px;
 }
 
 .FechaCardi {
-  font-size: 12px;
+  font-size: 10px;
   color: grey;
   text-align: left;
   margin-bottom: 0;
@@ -35,19 +35,21 @@
 }
 
 .imageCi {
-  width: 145px;
-  height: 145px;
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .FechaCardIt {
-  font-size: 14px;
+  font-size: 11px;
   color: grey;
   text-align: left;
   margin-bottom: 10;
 }
 
 .TextCardItt {
-  font-size: 14px;
+  font-size: 10px;
   color: grey;
   text-align: left;
   margin-bottom: 0;
@@ -60,6 +62,43 @@
     margin-bottom: 0;
     width: 73%;
     padding-left: 85px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .imageCi {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .containeri {
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .TituloCardi {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .FechaCardIt {
+    font-size: 14px;
+    color: grey;
+    text-align: left;
+    margin-bottom: 5;
+  }
+  .TextCardItt {
+    font-size: 14px;
+    color: grey;
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: bold;
   }
 }
 /*# sourceMappingURL=CustomCardI.css.map */

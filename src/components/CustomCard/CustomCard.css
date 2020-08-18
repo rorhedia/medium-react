@@ -35,5 +35,7 @@
 .imageC {
   width: 115px;
   height: 115px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=CustomCard.css.map */
