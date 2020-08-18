@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CustomCardI.css";
-import { Popover } from "antd";
+import { Popover, Tooltip } from "antd";
 
 function CustomCardI({
   card: { urlimage, title, text, author, company, key },
@@ -18,12 +18,19 @@ function CustomCardI({
         <Link to={urlRedirect}>
           <p className="FechaCardIt">{text.slice(0, 43)}</p>
         </Link>
-        <Popover content={text} title={company} trigger="hover">
+        <Popover
+          placement="topLeft"
+           content={author}
+          title={company}
+          trigger="hover"
+        >
           <p className="AutorCardi">
             {author} in {company}
           </p>
-        </Popover>{" "}
-        <p className="FechaCardi">August 03 · 4 min read ★</p>
+        </Popover>
+        <Tooltip placement="topLeft" title="Updated 07 Dec">
+          <p className="FechaCardi">December 07 · 4 min read ★</p>
+        </Tooltip>
       </div>
       <Link to={urlRedirect}>
         <img src={urlimage} alt={key} className="imageCi" />
