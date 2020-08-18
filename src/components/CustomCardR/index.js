@@ -17,7 +17,7 @@ function CustomCardR({
           <h3 className="TituloCardR">{title}</h3>
         </Link>
         <Link to={urlRedirect}>
-          <p className="FechaCardRt">{text}</p>
+          <p className="FechaCardRt">{text.slice(0, 50)}</p>
         </Link>
         <p className="AutorCardR">
           {author} in {company}

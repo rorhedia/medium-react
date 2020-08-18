@@ -4,6 +4,7 @@
   z-index: 1;
   background-color: white;
   padding: 8px 0;
+  
 }
 
 nav {
@@ -29,9 +30,22 @@ nav {
 
 .nav-control-left {
   text-align: right;
-  padding-right: 10px;
+  padding-right: 0px;
 }
 
 .nav-control-right {
-  padding-left: 10px;
+  padding-left: 0px;
+}
+
+
+@media only screen and (min-width: 520px){
+.posititon-stiky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  padding: 8px 0;
+  padding-left: 80px;
+  padding-right: 80px;
+}
 }

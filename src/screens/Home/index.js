@@ -72,13 +72,20 @@ function Home() {
             posts.map((post, idx) => <CustomCardI key={idx} card={post} />)}
         </Col>
         {/** POPULAR ON MEDIUM */}
-        <Col className="positioS" xs={24} sm={24} md={24} lg={6}>
-          <p className="PopularOnM">Popular on Medium</p>
-          <hr></hr>
-          {posts.length && <CustomCardList card={posts[6]} itemList="01" />}
-          {posts.length && <CustomCardList card={posts[7]} itemList="02" />}
-          {posts.length && <CustomCardList card={posts[8]} itemList="03" />}
-          {posts.length && <CustomCardList card={posts[9]} itemList="04" />}
+        <Col xs={24} sm={24} md={24} lg={6}>
+          <div className="positioS">
+            <p className="PopularOnM">Popular on Medium</p>
+            <hr></hr>
+            {posts.length && <CustomCardList card={posts[6]} itemList="01" />}
+            {posts.length && <CustomCardList card={posts[7]} itemList="02" />}
+            {posts.length && <CustomCardList card={posts[8]} itemList="03" />}
+            {posts.length && <CustomCardList card={posts[9]} itemList="04" />}
+            <div>
+              <p className="FooterL">
+                Help Status Writers Blog Careers Privacy Terms About
+              </p>
+            </div>
+          </div>
         </Col>
       </Row>
     </header>
