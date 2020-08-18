@@ -14,7 +14,7 @@ function CustomCardList({
       <p className="NumList">{itemList}</p>
       <div className="TextccmList">
         <Link to={urlRedirect}>
-          <h3 className="TituloCardList">{title}</h3>
+          <h3 className="TituloCardList">{title.slice(0, 40)}</h3>
         </Link>
         <p className="AutorCardList">
           {author} in {company}

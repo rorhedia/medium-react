@@ -1,7 +1,7 @@
 .containerL {
   color: black;
  margin-bottom: 20px;
- padding-right: 20px;
+ padding-right: 0px;
 }
 .TituloCardL {
   font-size: 18px;
@@ -41,7 +41,6 @@
 }
 
 .imageCL {
- //background-image: url("https://miro.medium.com/max/700/1*TyJQKnUbPwUMyjmGweO7Yw.jpeg");
 height: 155px;
 width: 300px;
 background-position: 50% 50%;
@@ -62,7 +61,6 @@ object-fit: cover;
   .imageCL {
 
  height: 155px;
-width: 420px;
-object-fit: cover;
+width: 390px;
 }
 }

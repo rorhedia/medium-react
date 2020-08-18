@@ -1,7 +1,7 @@
 .containerL {
   color: black;
   margin-bottom: 20px;
-  padding-right: 20px;
+  padding-right: 0px;
 }
 
 .TituloCardL {
@@ -57,9 +57,7 @@
 @media only screen and (min-width: 520px) {
   .imageCL {
     height: 155px;
-    width: 420px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 390px;
   }
 }
 /*# sourceMappingURL=CustomCardL.css.map */

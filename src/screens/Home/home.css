@@ -7,7 +7,8 @@
 .positioS {
   position: -webkit-sticky;
   position: sticky;
-  top: 20px;
+  top: 70px;
+  z-index: 1;
 }
 
 .containerCIF {
@@ -44,5 +45,11 @@
     margin-right: 70px;
     margin-left: 70px;
   }
+}
+
+.FooterL {
+  font-size: 17px;
+  font-weight: normal;
+  color: #969393;
 }
 /*# sourceMappingURL=home.css.map */
