@@ -1,0 +1,74 @@
+.titleMedium {
+  margin-top: 30px;
+  font-size: 12pt;
+}
+
+.SubtitleMedium {
+  font-size: 10pt;
+}
+
+.imageP {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 310px;
+  height: 200px;
+}
+
+@media only screen and (min-width: 728px) {
+  .imageP {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .imageP {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 650px;
+    height: 380px;
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  background-color: black;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logoFooter {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.textFooter {
+  color: white;
+  padding-top: 30px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=Popular.css.map */

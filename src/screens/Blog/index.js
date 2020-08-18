@@ -42,9 +42,8 @@ function Blog() {
           <div className="author">
             <div>
               <Avatar
-                margin-right={0}
                 size={50}
-                src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                src="https://cdn.pixabay.com/photo/2015/07/09/22/04/man-838636_960_720.jpg"
               />
             </div>
             <div>
