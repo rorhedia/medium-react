@@ -18,15 +18,12 @@ import Coronavirus from "./screens/Coronavirus/";
 
 import Popular from "./screens/Popular";
 
-
 function App() {
-  let isVisible = true;
   let sticky = true;
   if (
     window.location.pathname !== "/home" &&
     window.location.pathname !== "/"
   ) {
-    isVisible = false;
     sticky = false;
   }
 
@@ -34,12 +31,13 @@ function App() {
     <>
       <Router>
         <CustomHeader className={sticky ? "headerSticky" : ""} />
-        {isVisible ? <CustomNav /> : null}
         <Switch>
           <Route exact path="/">
+            <CustomNav />
             <Home />
           </Route>
           <Route exact path="/home">
+            <CustomNav />
             <Home />
           </Route>
           <Route path="/popular">
