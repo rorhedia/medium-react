@@ -27,7 +27,8 @@ function Blog() {
     getPost(id).then((data) => {
       setPost(data);
     });
-  }, []);
+  }, [id]);
+
   return (
     <div>
       <Row>

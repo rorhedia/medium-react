@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./App.css";
 
@@ -18,24 +18,12 @@ import Coronavirus from "./screens/Coronavirus/";
 
 import Popular from "./screens/Popular";
 
-
 function App() {
-  const [flag, setFlag] = useState({
-    isVisible: true,
-    sticky: true,
-  });
-
-  const handleFlag = (data) => {
-    console.log(data);
-  };
-
-  let isVisible = true;
   let sticky = true;
   if (
     window.location.pathname !== "/home" &&
     window.location.pathname !== "/"
   ) {
-    isVisible = false;
     sticky = false;
   }
 
@@ -43,12 +31,13 @@ function App() {
     <>
       <Router>
         <CustomHeader className={sticky ? "headerSticky" : ""} />
-        {isVisible ? <CustomNav callback={handleFlag} /> : null}
         <Switch>
           <Route exact path="/">
+            <CustomNav />
             <Home />
           </Route>
           <Route exact path="/home">
+            <CustomNav />
             <Home />
           </Route>
           <Route path="/popular">

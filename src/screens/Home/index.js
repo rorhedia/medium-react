@@ -27,7 +27,7 @@ function Home() {
           data[key]["key"] = key;
           usersArr.push(data[key]);
         }
-
+        usersArr.reverse();
         let newArr = posts.concat(usersArr);
         setPost(newArr);
       });
@@ -51,15 +51,15 @@ function Home() {
       <br></br>
       <Row className="containerCardTT">
         <Col className="containerCRT" xs={24} sm={24} md={12} lg={9}>
-          {posts.length && <CustomCardL card={posts[0]} />}
+          {posts.length ? <CustomCardL card={posts[0]} /> : null}
         </Col>
         <Col className="containerCMT" xs={24} sm={24} md={12} lg={7}>
-          {posts.length && <CustomCard card={posts[1]} />}
-          {posts.length && <CustomCard card={posts[2]} />}
-          {posts.length && <CustomCard card={posts[3]} />}
+          {posts.length ? <CustomCard card={posts[1]} /> : null}
+          {posts.length ? <CustomCard card={posts[2]} /> : null}
+          {posts.length ? <CustomCard card={posts[3]} /> : null}
         </Col>
         <Col className="containerLT" xs={0} sm={0} md={0} lg={8}>
-          {posts.length && <CustomCardR card={posts[4]} />}
+          {posts.length ? <CustomCardR card={posts[4]} /> : null}
         </Col>
       </Row>
       <p className="TextSee">SEE EDITOR’S PICKS ›</p>
@@ -68,18 +68,27 @@ function Home() {
       <Row className="containerCIF">
         {/** SCROLL INFINITO */}
         <Col xs={24} sm={24} md={24} lg={16}>
-          {posts.length &&
-            posts.map((post, idx) => <CustomCardI key={idx} card={post} />)}
+          {posts.length
+            ? posts.map((post, idx) => <CustomCardI key={idx} card={post} />)
+            : null}
         </Col>
         {/** POPULAR ON MEDIUM */}
         <Col xs={24} sm={24} md={24} lg={6}>
           <div className="positioS">
             <p className="PopularOnM">Popular on Medium</p>
             <hr></hr>
-            {posts.length && <CustomCardList card={posts[6]} itemList="01" />}
-            {posts.length && <CustomCardList card={posts[7]} itemList="02" />}
-            {posts.length && <CustomCardList card={posts[8]} itemList="03" />}
-            {posts.length && <CustomCardList card={posts[9]} itemList="04" />}
+            {posts.length ? (
+              <CustomCardList card={posts[6]} itemList="01" />
+            ) : null}
+            {posts.length ? (
+              <CustomCardList card={posts[7]} itemList="02" />
+            ) : null}
+            {posts.length ? (
+              <CustomCardList card={posts[8]} itemList="03" />
+            ) : null}
+            {posts.length ? (
+              <CustomCardList card={posts[9]} itemList="04" />
+            ) : null}
             <div>
               <p className="FooterL">
                 Help Status Writers Blog Careers Privacy Terms About
