@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Popover, Tooltip } from "antd";
 
 import "./CustomCardR.css";
 
@@ -19,10 +20,19 @@ function CustomCardR({
         <Link to={urlRedirect}>
           <p className="FechaCardRt">{text.slice(0, 50)}</p>
         </Link>
-        <p className="AutorCardR">
-          {author} in {company}
-        </p>
-        <p className="FechaCardR">August 03 · 4 min read ★</p>
+        <Popover
+          placement="topLeft"
+          content={author}
+          title={company}
+          trigger="hover"
+        >
+          <p className="AutorCardR">
+            {author} in {company}
+          </p>
+        </Popover>
+        <Tooltip placement="topLeft" title="Updated 28 May">
+          <p className="FechaCardR">May 28 · 4 min read ★</p>
+        </Tooltip>
       </div>
     </div>
   );
