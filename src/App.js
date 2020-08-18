@@ -13,7 +13,11 @@ import CustomNav from "./components/CustomNav";
 import Home from "./screens/Home";
 import Blog from "./screens/Blog";
 import CustomForm from "./screens/CustomForm/";
+
+import Coronavirus from "./screens/Coronavirus/";
+
 import Popular from "./screens/Popular";
+
 
 function App() {
   let isVisible = true;
@@ -45,7 +49,7 @@ function App() {
             <h1>MOMENTUM</h1>
           </Route>
           <Route path="/coronavirus">
-            <h1>CORONAVIRUS</h1>
+            <Coronavirus />
           </Route>
           <Route path="/onezero">
             <h1>ONEZERO</h1>

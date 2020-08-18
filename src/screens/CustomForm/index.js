@@ -2,16 +2,14 @@ import React from "react";
 import "./CustomForm.css";
 import { Form, Input, Button } from "antd";
 import { Row, Col } from "antd";
+import { addPost } from "../../services.js";
 
 function CustomForm() {
   const createPost = (data) => {
     let created = Math.floor(Date.now() / 1000);
 
     data["created"] = created;
-    fetch("https://reactsessions-ac545.firebaseio.com/equipotres.json", {
-      method: "POST",
-      body: JSON.stringify(data),
-    }).then((response) => console.log(response));
+    addPost(data).then((response) => console.log(response));
   };
 
   const { REACT_APP_URL_IMAGES } = process.env;
@@ -21,23 +19,27 @@ function CustomForm() {
     <Row className="containerForm">
       <Col className="formD" xs={24} sm={24} md={24} lg={12}>
         <Form onFinish={createPost}>
-          <Form.Item name="title" className="itemGenerico">
-            <Input placeholder="input placeholder" />
+          <Form.Item name="title" className="itemGenerico" label="Tittle">
+            <Input />
           </Form.Item>
-          <Form.Item name="text" className="itemGenerico">
-            <Input.TextArea placeholder="input placeholder" />
+          <Form.Item name="text" className="itemGenerico" label="Text">
+            <Input />
           </Form.Item>
-          <Form.Item name="author" className="itemGenerico">
-            <Input placeholder="input placeholder" />
+          <Form.Item name="author" className="itemGenerico" label="Author">
+            <Input />
           </Form.Item>
-          <Form.Item name="urlimage" className="itemGenerico">
-            <Input placeholder="input placeholder" />
+          <Form.Item name="urlimage" className="itemGenerico" label="Image Url">
+            <Input />
           </Form.Item>
-          <Form.Item name="paragraph" className="itemGenerico">
-            <Input placeholder="input placeholder" />
+          <Form.Item
+            name="paragraph"
+            className="itemGenerico"
+            label="Paragraph"
+          >
+            <Input />
           </Form.Item>
-          <Form.Item name="company" className="itemGenerico">
-            <Input placeholder="input placeholder" />
+          <Form.Item name="company" className="itemGenerico" label="Company">
+            <Input />
           </Form.Item>
 
           <Row xs={24} sm={24} md={24} lg={24}>
