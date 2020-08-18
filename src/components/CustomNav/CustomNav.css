@@ -9,31 +9,33 @@
 
 nav {
   width: 100%;
+  margin: 0;
 }
 
 nav ul {
   padding: 0;
-  font-size: small;
   margin: 0;
+  font-size: small;
   white-space: nowrap;
   color: #6c757d;
   overflow-x: auto;
 }
 
-nav ul li {
-  margin-right: 25px;
-  display: inline-block;
-}
-
-nav ul li a {
+nav ul a {
   color: #6c757d;
+  margin: 0 10px;
 }
 
-nav ul li a:hover {
+nav ul a:hover {
   color: black;
 }
 
 .nav-control-left {
   text-align: right;
+  padding-right: 10px;
+}
+
+.nav-control-right {
+  padding-left: 10px;
 }
 /*# sourceMappingURL=CustomNav.css.map */

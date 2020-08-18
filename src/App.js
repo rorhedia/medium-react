@@ -13,23 +13,28 @@ import CustomNav from "./components/CustomNav";
 import Home from "./screens/Home";
 import Blog from "./screens/Blog";
 import CustomForm from "./screens/CustomForm/";
+
 import Coronavirus from "./screens/Coronavirus/";
+
+import Popular from "./screens/Popular";
+
 
 function App() {
   let isVisible = true;
+  let sticky = true;
   if (
     window.location.pathname !== "/home" &&
     window.location.pathname !== "/"
   ) {
     isVisible = false;
+    sticky = false;
   }
 
   return (
     <>
-      <CustomHeader />
-      {isVisible ? <CustomNav /> : null}
-
       <Router>
+        <CustomHeader className={sticky ? "headerSticky" : ""} />
+        {isVisible ? <CustomNav /> : null}
         <Switch>
           <Route exact path="/">
             <Home />
@@ -38,7 +43,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/popular">
-            <h1>POPULAR</h1>
+            <Popular />
           </Route>
           <Route path="/momentum">
             <h1>MOMENTUM</h1>

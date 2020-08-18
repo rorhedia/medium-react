@@ -40,8 +40,10 @@
 
 .imageCL {
   height: 155px;
-  width: 100%;
+  width: 300px;
   background-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (min-width: 520px) {
@@ -49,6 +51,15 @@
     margin-bottom: 0;
     width: 90%;
     padding-left: 85px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .imageCL {
+    height: 155px;
+    width: 420px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /*# sourceMappingURL=CustomCardL.css.map */
