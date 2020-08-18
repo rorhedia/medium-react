@@ -11,14 +11,14 @@ function Popular() {
   const [posts, getPostsRemote] = useState([]);
 
   useEffect(() => {
-    let idBlog = window.location.pathname.split("/")[2];
+    // let idBlog = window.location.pathname.split("/")[2];
     getPosts().then((data) => {
       let usersArr = [];
       for (const key in data) {
         data[key]["key"] = key;
         usersArr.push(data[key]);
       }
-      console.log(usersArr);
+
       getPostsRemote(usersArr);
     });
   }, []);
@@ -74,7 +74,8 @@ function Popular() {
           md={{ span: 14, offset: 2 }}
           lg={{ span: 14, offset: 2 }}
         >
-          {posts && posts.map((post) => <CustomCard card={post} />)}
+          {posts &&
+            posts.map((post) => <CustomCard key={post.key} card={post} />)}
         </Col>
       </Row>
       <footer className="footer">

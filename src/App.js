@@ -28,10 +28,9 @@ function App() {
 
   return (
     <>
-      <CustomHeader className={sticky ? "headerSticky b" : "b"} />
-      {isVisible ? <CustomNav /> : null}
-
       <Router>
+        <CustomHeader className={sticky ? "headerSticky" : ""} />
+        {isVisible ? <CustomNav /> : null}
         <Switch>
           <Route exact path="/">
             <Home />
