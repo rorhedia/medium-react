@@ -85,6 +85,12 @@ function App() {
               subHeader="Beat yesterday. A Medium publication about personal development"
             />
           </Route>
+          <Route path="/human">
+            <Coronavirus
+              hederText="Medium Human Parts Blog"
+              subHeader="When a Tomato Becomes a Luxury"
+            />
+          </Route>
           <Route path="/marker">
             <Coronavirus
               hederText="Medium Marker Blog"
@@ -100,6 +106,12 @@ function App() {
           <Route path="/heated">
             <Coronavirus
               hederText="Medium Heated Blog"
+              subHeader="When a Tomato Becomes a Luxury"
+            />
+          </Route>
+          <Route path="/more">
+            <Coronavirus
+              hederText="Medium More Blog"
               subHeader="When a Tomato Becomes a Luxury"
             />
           </Route>
