@@ -20,19 +20,13 @@ function CustomNav(props) {
     "GEN",
     "ZORA",
     "FORGE",
-    "HUMAN PARTS",
     "MARKER",
     "LEVEL",
     "HEATED",
-    "MORE",
   ];
 
   const listItems = dataNavbar.map((data, idx) => {
     let href = data.toLowerCase();
-
-    if (data === "human parts") {
-      href = "human-parts";
-    }
 
     return (
       <Link key={idx} to={`/${href}`} className="link-url">

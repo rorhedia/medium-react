@@ -44,40 +44,64 @@ function App() {
             <Popular />
           </Route>
           <Route path="/momentum">
-            <h1>MOMENTUM</h1>
+            <Coronavirus
+              hederText="Medium Momentum Blog"
+              subHeader="A Medium blog about the fight against anti-Black racism"
+            />
           </Route>
           <Route path="/coronavirus">
-            <Coronavirus />
+            <Coronavirus
+              hederText="Medium Coronavirus Blog"
+              subHeader="A real-time resource for Covid-19 news"
+            />
           </Route>
           <Route path="/onezero">
-            <h1>ONEZERO</h1>
+            <Coronavirus
+              hederText="Medium Onezero Blog"
+              subHeader="The undercurrents of the future. A Medium publication about tech and science"
+            />
           </Route>
           <Route path="/elemental">
-            <h1>ELEMENTAL</h1>
+            <Coronavirus
+              hederText="Medium Elemental Blog"
+              subHeader="Your life, sourced by science. A Medium publication about health and wellness"
+            />
           </Route>
           <Route path="/gen">
-            <h1>GEN</h1>
+            <Coronavirus
+              hederText="Medium Gen Blog"
+              subHeader="What matters now. A Medium publication about politics, power, and culture."
+            />
           </Route>
           <Route path="/zora">
-            <h1>ZORA</h1>
+            <Coronavirus
+              hederText="Medium Zora Blog"
+              subHeader="Unapologetic. Ours. A Medium publication for women of color."
+            />
           </Route>
           <Route path="/forge">
-            <h1>FORGE</h1>
-          </Route>
-          <Route path="/human-parts">
-            <h1>HUMAN PARTS</h1>
+            <Coronavirus
+              hederText="Medium Forge Blog"
+              subHeader="Beat yesterday. A Medium publication about personal development"
+            />
           </Route>
           <Route path="/marker">
-            <h1>MARKER</h1>
+            <Coronavirus
+              hederText="Medium Marker Blog"
+              subHeader="Making you smarter about business. A publication from Medium."
+            />
           </Route>
           <Route path="/level">
-            <h1>LEVEL</h1>
+            <Coronavirus
+              hederText="Medium Level Blog"
+              subHeader="I’m Not Your Poster Child for Workplace Diversity"
+            />
           </Route>
           <Route path="/heated">
-            <h1>HEATED</h1>
-          </Route>
-          <Route path="/more">
-            <h1>MORE</h1>
+            <Coronavirus
+              hederText="Medium Heated Blog"
+              subHeader="When a Tomato Becomes a Luxury"
+            />
           </Route>
           <Route path="/post">
             <CustomForm />
